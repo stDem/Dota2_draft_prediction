@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.teams {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+#hero-list, #ally-picks, #enemy-picks, #recommendations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+}
+
+.hero {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.selected-ally {
+  background-color: lightgreen;
+}
+
+.selected-enemy {
+  background-color: lightcoral;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+}

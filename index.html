@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dota 2 Draft Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Dota 2 Draft Assistant</h1>
+
+    <button onclick="toggleTeam()">🔄 Switch to Enemy Team</button>
+
+    <div class="teams">
+        <div>
+            <h2>✅ Your Team</h2>
+            <div id="ally-picks"></div>
+        </div>
+        <div>
+            <h2>❌ Enemy Team</h2>
+            <div id="enemy-picks"></div>
+        </div>
+    </div>
+
+    <h2>Available Heroes</h2>
+    <div id="hero-list"></div>
+
+    <button onclick="getRecommendation()">🔮 Get Recommendations</button>
+
+    <h2>🛡 Recommended Heroes</h2>
+    <div id="recommendations"></div>
+
+    <h2>📖 Explanation</h2>
+    <p id="explanation"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
