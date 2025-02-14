@@ -51,7 +51,7 @@ def generate_hero_explanation(hero_name, ally_picks, enemy_picks):
     enemy_names = [hero_id_to_name.get(str(h), h) for h in enemy_picks]
     
     prompt = (
-        f"Hero: {hero_name} in Dota 2\n"
+        f"Dota 2 Hero: {hero_name}\n"
         f"Abilities: {abilities}\n"
         f"Role: {role}\n"
         f"Ally Heroes: {', '.join(ally_names)}\n"
@@ -59,7 +59,7 @@ def generate_hero_explanation(hero_name, ally_picks, enemy_picks):
         f"Why is {hero_name} a good here?"
     )
 
-    explanation = text_generator(prompt, max_length=400, num_return_sequences=1, pad_token_id=50256)[0]["generated_text"]
+    explanation = text_generator(prompt, max_length=200, num_return_sequences=1, pad_token_id=50256)[0]["generated_text"]
 
     return f"🌟 **{hero_name}**: {hype}\n🛠 **Abilities**: {abilities}\n🎭 **Role**: {role}\n📝 **Why this pick?**: {explanation}"
   

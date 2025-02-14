@@ -2,6 +2,7 @@ let allyPicks = [];
 let enemyPicks = [];
 let selectingForAlly = true; // True = selecting for ally, False = selecting for enemy
 let heroes = [];
+const toggleButton = document.querySelector(".btn-toggle");
 
 document.addEventListener("DOMContentLoaded", async function () {
     await loadHeroes();
@@ -44,7 +45,17 @@ function renderHeroList() {
 
 function toggleTeam() {
     selectingForAlly = !selectingForAlly;
-    document.querySelector("button").innerText = selectingForAlly ? "🔄 Switch to Enemy Team" : "🔄 Switch to Your Team";
+  if (selectingForAlly) {
+    toggleButton.innerText = "🔄 Switch to Enemy Team";
+    toggleButton.classList.add("ally-btn");
+
+  } else {
+    toggleButton.innerText = "🔄 Switch to Your Team";
+    toggleButton.classList.remove("ally-btn");
+
+    
+  }
+  
 }
 
 function selectHero(heroName) {
@@ -65,13 +76,34 @@ function selectHero(heroName) {
 }
 
 function updateTeams() {
-    document.getElementById("ally-picks").innerText = allyPicks.join(", ");
-    document.getElementById("enemy-picks").innerText = enemyPicks.join(", ");
+  const allyContainer = document.getElementById("ally-picks");
+  const enemyContainer = document.getElementById("enemy-picks");
+
+  // Clear existing picks
+  allyContainer.innerHTML = "";
+  enemyContainer.innerHTML = "";
+
+  // Add each hero as a separate element
+  allyPicks.forEach(hero => {
+      const span = document.createElement("span");
+      span.classList.add("ally-pick");
+      span.innerText = hero;
+      allyContainer.appendChild(span);
+  });
+
+  enemyPicks.forEach(hero => {
+      const span = document.createElement("span");
+      span.classList.add("enemy-pick");
+      span.innerText = hero;
+      enemyContainer.appendChild(span);
+  });
 }
 
+
+
 async function getRecommendation() {
-    const allyPicks = [...document.querySelectorAll("#ally-picks")].map(el => el.innerText);
-    const enemyPicks = [...document.querySelectorAll("#enemy-picks")].map(el => el.innerText);
+    // const allyPicks = [...document.querySelectorAll("#ally-picks")].map(el => el.innerText);
+    // const enemyPicks = [...document.querySelectorAll("#enemy-picks")].map(el => el.innerText);
 
     console.log("📤 Sending Request - Ally Picks:", allyPicks, "Enemy Picks:", enemyPicks);
 
@@ -128,7 +160,7 @@ function displayRecommendations(recommendedHeroes, explanations) {
 
   // recommendationsDiv.innerHTML = "<h3>🛡 Recommended Heroes</h3>";
   recommendedHeroes.forEach(hero => {
-      const heroBtn = document.createElement("button");
+      const heroBtn = document.createElement("p");
       heroBtn.textContent = hero;
       heroBtn.classList.add("hero-button");
       heroBtn.onclick = () => addToTeam(hero); 
@@ -137,9 +169,9 @@ function displayRecommendations(recommendedHeroes, explanations) {
 
   // explanationsDiv.innerHTML = "<h3>📖 Explanation</h3>";
   explanations.forEach(explanation => {
-      const explanationPara = document.createElement("p");
-      explanationPara.innerHTML = explanation; 
-      explanationsDiv.appendChild(explanationPara);
+    const explanationPara = document.createElement("p");
+    explanationPara.innerHTML = explanation.replace(/\n/g, "<br>");
+    explanationsDiv.appendChild(explanationPara);
   });
 }
 
