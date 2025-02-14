@@ -77,9 +77,9 @@ pip install -r requirements.txt
 python app.py
 ```
 4️⃣ **Open index.html**  
-```  
+
 open index.html with live server
-```
+
 
 ## Project composition:
 - **dota_draft_prediction.ipynb** - Jupyter Notebook includes both models and testing;
