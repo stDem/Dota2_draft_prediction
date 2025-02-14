@@ -54,9 +54,9 @@ def generate_hero_explanation(hero_name, ally_picks, enemy_picks):
         f"Dota 2 Hero: {hero_name}\n"
         f"Abilities: {abilities}\n"
         f"Role: {role}\n"
-        f"Ally Heroes: {', '.join(ally_names)}\n"
-        f"Enemy Heroes: {', '.join(enemy_names)}\n"
-        f"Why is {hero_name} a good here?"
+        # f"Ally Heroes: {', '.join(ally_names)}\n"
+        # f"Enemy Heroes: {', '.join(enemy_names)}\n"
+        f"Why is {hero_name} a good here in Dota 2 game if your team has {', '.join(ally_names)} and enemy's team has {', '.join(enemy_names)}?"
     )
 
     explanation = text_generator(prompt, max_length=200, num_return_sequences=1, pad_token_id=50256)[0]["generated_text"]

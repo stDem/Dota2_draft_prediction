@@ -94,3 +94,38 @@ open index.html with live server
 This project is **open-source** under the MIT License.  
 
 
+
+## Example:
+
+🔥 Testing Hero Recommendation with Ally and Enemy Picks...<br>
+✅ Ally Picks: ['Axe', 'Dazzle']<br>
+❌ Enemy Picks: ['Pudge', 'Crystal Maiden']<br><br>
+🛡 **Recommended Heroes**: Juggernaut, Enchantress, Earthshaker<br>
+
+🌟 **Juggernaut**: In a flurry of slashes, Juggernaut cuts down his foes. Sprinting and spinning into battle with reckless abandon, and nearly invincible once he is able to begin his assault, stopping Juggernaut can often be just as difficult as surviving him.<br>
+🛠 **Abilities**: Blade Fury, Healing Ward, Blade Dance, Omnislash<br>
+🎭 **Role**: Carry,Pusher,Escape<br>
+📝 **Why this pick?**: Hero: Juggernaut in Dota 2<br>
+Abilities: Blade Fury, Healing Ward, Blade Dance, Omnislash<br>
+Role: Carry,Pusher,Escape<br>
+Why is Juggernaut a good here in Dota 2 game if your team has Axe, Dazzle and enemy's team has Pudge, Crystal Maiden?<br> This guide focuses just on the abilities that Juggernaut has, so you're not surprised when you learn the combos he gets through your fights, but just to learn how to get the most out of your team's abilities, you need to be ready to be in a close fight on the map if there's no one to backstab. <span style="color:blue">All while practicing your passive, dodging damage, avoiding attacks from teammates and getting the most out of your team.</span> If possible, be prepared to focus on all four skills of Juggernaut first and then try to build up some more team utility and damage before you go on in on your poke, as the skills you will be able to use on
+
+🌟 **Enchantress**: Harmful up close and lethal at a distance, Enchantress skewers foes with attacks imbued to become more damaging the further they fly. Whether inflicting powerful slows on her enemies or charming forest creatures to fight her battles, she is never short of tools to win a fight.<br>
+🛠 **Abilities**: Untouchable, Enchant, Nature's Attendants, Impetus<br>
+🎭 **Role**: Support,Jungler,Pusher,Durable,Disabler<br>
+📝 **Why this pick?**: Hero: Enchantress in Dota 2<br>
+Abilities: Untouchable, Enchant, Nature's Attendants, Impetus<br>
+Role: Support,Jungler,Pusher,Durable,Disabler<br>
+Why is Enchantress a good here in Dota 2 game if your team has Axe, Dazzle and enemy's team has Pudge, Crystal Maiden?<br> <span style="color:blue">Probably because even if your mid has Doomfist and team is using the Doomfist to counter the ADC.</span> With 3 enemy's out and no 1 jungle, the difference between a support and support team who have good early game AD can be hundreds of millions.
+Abilities: Enchantress, Nature's Attendants, Impetus, Desperado, Enchanted Titan
+Why it's good: <span style="color:blue">The most powerful damage of any champion with an ungodly damage and it's the perfect support role for all your ADC heroes.</span><br>
+
+🌟 **Earthshaker**: Whether blocking an enemy's escape, dividing their forces, or shattering the ground beneath gathered foes, Earthshaker is at his best when he strikes without warning. Whatever survives the aftershocks still has a swing from his mighty totem to look forward to.<br>
+🛠 **Abilities**: Fissure, Enchant Totem, Aftershock, Echo Slam<br>
+🎭 **Role**: Support,Initiator,Disabler,Nuker<br>
+📝 **Why this pick?**: Hero: Earthshaker in Dota 2<br>
+Abilities: Fissure, Enchant Totem, Aftershock, Echo Slam<br>
+Role: Support,Initiator,Disabler,Nuker<br>
+Why is Earthshaker a good here in Dota 2 game if your team has Axe, Dazzle and enemy's team has Pudge, Crystal Maiden?<br> A good team can easily snowball your team into a situation where you can get past your opponent. In other words, if they are having problems, they have to learn how to play their game and go to face value, not simply get into a bad situation.
+In my opinion, <span style="color:blue">Earthshaker is a very good lane pick. Its hard to be successful at this solo lane. To find a solid way to punish opponents that might not be well-positioned or to get the best out of your supports in teamfights, you need to always play your lane. </span>A lot of times a lane swap will mean going on offense
+
