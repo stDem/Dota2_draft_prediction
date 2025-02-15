@@ -10,9 +10,19 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 async function loadHeroes() {
   try {
-      const response = await fetch("http://127.0.0.1:5000/heroes"); 
-      const data = await response.json();
+      const response = await fetch("https://dota2-draft-prediction-backend.vercel.app/heroes", {
+          method: "GET",
+          mode: "cors", 
+          headers: {
+              "Content-Type": "application/json"
+          }
+      });
 
+      if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data = await response.json();
       console.log("Received heroes:", data);
 
       if (!Array.isArray(data)) {
@@ -25,6 +35,8 @@ async function loadHeroes() {
       console.error("Error loading heroes:", error);
   }
 }
+
+
 
 
 function renderHeroList() {
@@ -108,8 +120,9 @@ async function getRecommendation() {
     console.log("📤 Sending Request - Ally Picks:", allyPicks, "Enemy Picks:", enemyPicks);
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/predict", {
-            method: "POST",
+        const response = await fetch("https://dota2-draft-prediction-backend.vercel.app/predict", {
+          method: "POST",
+          mode: "cors",
             headers: {
                 "Content-Type": "application/json"
             },
